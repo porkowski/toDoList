@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div id="projectForm" class="formHidden">
+        <form action="" method="">
+            <div class="form-row1">
+                <label for="project_title">Project Title:<span aria-label="required">*</span></label>
+                <input type="text" id="project_title" name="project_title" minlength="2" required>
+            </div>
+            <div class="form-row2">
+                <input type="submit" value="Submit" id="submitButton">
+            </div>
+        </form>
+    </div>
+
+    <div id="toDoForm" class="formHidden">
+        <form action="" method="">
+            <div class="form-row1">
+                <label for="title">Title:<span aria-label="required">*</span></label>
+                <input type="text" id="title" name="title" minlength="2" required>
+            </div>
+            <div class="form-row1">
+                <label for="dueDate">Due Date:<span aria-label="required">*</span></label>
+                <input type="date" id="dueDate" name="dueDate" minlength="2" required>
+            </div>
+            <div class="form-row1">
+                <label for="description">Description:<span aria-label="required">*</span></label>
+                <textarea name="description" id="description" rows="4" cols="50" required></textarea>
+            </div>
+            <div class="form-row1">
+                <label for="priority">Please Check the Priority<span aria-label="required">*</span></label>
+                <span>
+                    <div class="radios">
+              
+                            <input type="radio" id="Low" name="priority" value="Low">
+                            <label for="Low">Low</label>
+                   
+                            <input type="radio" id="Medium" name="priority" value="Medium" checked>
+                            <label for="Medium">Medium</label>
+
+                            <input type="radio" id="High" name="priority" value="High">
+                            <label for="High">High</label>
+          
+                    </div>
+                </span>
+            </div>
+            <div class="form-row2">
+                <input type="submit" value="Submit" id="submitButton">
+            </div>
+        </form>
+    </div>
+
+
+</body>
+<script src="main.js"></script>
+</html>
