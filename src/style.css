@@ -1,0 +1,181 @@
+
+
+@font-face {
+    font-family: 'Script';
+    src:url('./Yellowtail-Regular.ttf');
+    font-weight: 600;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'base';
+    src:url('./SpaceGrotesk-VariableFont_wght.ttf');
+    font-weight: 600;
+    font-style:normal;
+}
+
+body{
+    height:95vh;
+    margin:0;
+}
+
+#MainGrid {
+    display:grid;
+    grid-template-rows:1fr 8fr;
+    grid-template-columns:3fr 7fr;
+    gap:.5rem;
+    max-height:auto;
+}
+
+.griditem1, .griditem2 {
+    border:solid black;
+    padding:.5rem;
+}
+
+.banner {
+    grid-column:1/3;
+    font-family: 'Script';
+    text-align: center;
+    font-size:3rem;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin:0;
+    padding: 1rem 0 0 0;
+    font-family: 'base';
+    text-align: center;
+}
+
+.griditem1,.griditem2 {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project {
+    padding:.5rem;
+    background-color: aliceblue;
+    border-radius:.5rem;
+    margin-bottom:.5rem;
+}
+
+#expanded {
+    background-color: aliceblue;
+    border:solid 2px rgba(77, 160, 255, 0.548);
+    padding:1rem;
+}
+
+.project:hover,
+.todoitem:hover {
+    cursor:pointer;
+}
+
+#addbtn,
+#todobtn,#submitButton {
+    display:flex;
+    justify-content:space-evenly;
+    background-color: aliceblue;
+    border:solid rgba(77, 160, 255, 0.548) 2px;
+    border-radius:.5rem;
+    font-family: 'Script';
+    padding:.5rem;
+}
+
+#addbtn:hover,
+#todobtn:hover,
+#submitButton:hover {
+    cursor:pointer;
+    box-shadow: -3px 3px rgba(77, 160, 255, 0.548);
+}
+
+
+#addbtn:active,
+#todobtn:active,
+#submitButton:active {
+    cursor:pointer;
+    translate: -3px 3px;
+    box-shadow:none;
+}
+
+.formHidden {
+display:none !important;
+}
+    
+.formDisplay {
+display:block;
+}
+    
+#projectForm>form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    font-family:'base';
+}
+
+.form-row1,.form-row2 {
+    font-family:'base';
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom:5px;
+    gap:5px;
+}
+
+.form-row1>input[type=text] {
+    outline:none;
+    border:solid 1px rgba(77, 160, 255, 0.548);
+    width:min(300px,90%);
+    border-radius:4px;
+
+} 
+
+textarea {
+    outline:none;
+    border:solid 1px rgba(77, 160, 255, 0.548);
+    width:min(300px,90%);
+    border-radius:4px; 
+}
+
+#submitButton {
+    padding-left:20px;
+    padding-right:20px;
+}
+
+input[type=text]:hover,
+textarea:hover {
+    background-color:rgba(240, 248, 255, 0.534);
+}
+
+input[type=text]:active,
+textarea:active {
+    background-color:rgba(240, 248, 255, 0.534);
+}
+
+.removebtn,
+.prioritychanger{
+outline:none;
+border:none;
+background-color: aliceblue;
+cursor:pointer;
+}
+
+.removebtn:before {
+    content:url(check-circle.svg)
+}
+
+.prioritychanger:before {
+    content:url(alert-circle.svg);
+}
+
+.removebtn:hover,
+.prioritychanger:hover {
+    transform:scale(.95);
+    opacity: .75;
+}
+
+.removebtn:active,
+.prioritychanger:active {
+    transform:scale(.85);
+    opacity: .75;
+}
