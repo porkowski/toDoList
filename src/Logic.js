@@ -52,8 +52,8 @@ function addItem(item) {
 (function initialProject(){ 
     document.addEventListener('DOMContentLoaded',(event)=> { 
         const proj1 = new Project('Clean The Porsche 911');
-        proj1.toDoItem('Detail the exterior','2023-09-10', 'Use claybar on the exterior','medium');
-        proj1.toDoItem('Clean the interior','2023-09-15', 'Stick a tree freshener in there and call it a day','low');
+        proj1.toDoItem('Detail the exterior','2023-09-10', 'Use claybar on the exterior','Medium');
+        proj1.toDoItem('Clean the interior','2023-09-15', 'Stick a tree freshener in there and call it a day','Low');
     });
 })();
 
@@ -64,8 +64,16 @@ function removeToDo(projectId,i) {
 }
 
 function changePriority(projectId,i) {
-    const selection = prompt('low, medium, or high priority?','medium');
-    Project.myLibrary[projectId].toDoList[i].priority = selection;
+    let currentPriority = Project.myLibrary[projectId].toDoList[i].priority;
+    //Toggle priority switch
+        if (currentPriority == 'Low') {currentPriority = 'Medium';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;} 
+        else if (currentPriority == 'Medium') {currentPriority = 'High';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;}
+        else if (currentPriority == 'High') {currentPriority = 'Low';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;}
+        
+
 }
 
 
