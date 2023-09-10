@@ -12,6 +12,9 @@ module.exports = {
     poll: true,
     ignored: /node_modules/
   },
+  optimization: {
+    minimize: false,
+  },
   module: {
     rules: [
         {
