@@ -837,7 +837,7 @@ class Project {
                 description,
                 priority
             }
-            console.log(item);
+            
             let add2dom = addItem.bind(this);
             add2dom(item);
         
@@ -904,13 +904,13 @@ function changePriority(projectId,i) {
 
 
 //Create first instance of Project for demo, along with to do items
-(function initialProject(){ 
+function initialProject(){ 
     document.addEventListener('DOMContentLoaded',(event)=> { 
         const proj1 = new Project('Clean The Porsche 911');
         proj1.toDoItem('Detail the exterior','2023-09-10', 'Use claybar on the exterior','Medium');
         proj1.toDoItem('Clean the interior','2023-09-15', 'Stick a tree freshener in there and call it a day','Low');
     });
-})();
+};
 
 function updateLocalStorage() {
 
@@ -922,40 +922,71 @@ function updateLocalStorage() {
 
 //Check local storage at Page start
 function checkLS() {   
+    //grab local storage data from refresh before DOM content loads
     let myLibrary_deserialized = JSON.parse(localStorage.getItem("library"));
 
+    if (myLibrary_deserialized == null) {
+        initialProject();
+        updateLocalStorage();}
+    else {
+        let myLibrary_redone = JSON.stringify(myLibrary_deserialized);
+        localStorage.setItem("library",myLibrary_redone);
+        let myLibrary_New = JSON.parse(localStorage.getItem("library")); 
 
-    document.addEventListener("DOMContentLoaded", ()=> {
-        if (myLibrary_deserialized !== null) {
-            //Declare initial project library for comparison
-            var todolist = myLibrary_deserialized[0].toDoList;
-            var initialToDo = Project.myLibrary[0].toDoList;
-            var projlength = myLibrary_deserialized.length;
-            var initialProjLength = Project.myLibrary.length;
-        };
+        document.addEventListener('DOMContentLoaded',(event)=> { 
+            //Set local storage item to what the user updated in previous session
+            checkProjects(myLibrary_New);
+            checkProperties(myLibrary_New);
 
-        //Check that local storage MATCHES initialization (i.e nothing changed on users end)
-            if (myLibrary_deserialized == null || projlength == initialProjLength && todolist.length == initialToDo.length && initialToDo[0].priority == todolist[0].priority && initialToDo[1].priority == todolist[1].priority) {console.log(true)} 
-            else {
-                //Set local storage item to what the user updated in previous session
-                let myLibrary_redone = JSON.stringify(myLibrary_deserialized);
-                localStorage.setItem("library",myLibrary_redone);
+            //Create new Project instance if something in the properties changed
 
-                //NEED TO PUSH local storage stuff to mylibrary
-                let myLibrary_New = JSON.parse(localStorage.getItem("library"));
-                console.log(myLibrary_New);
-
-                //Check if new objects & properties are the same or have changed. Loop thru properties, if there is a change, update it in Project
-                
-
-                generatetodos();
-            }
-        
-    })
+            generatetodos();
+        })
+    }
 
 }
 checkLS();
 
+//Function to check what projects need to be added
+function checkProjects(myLibrary_New) {
+
+    for (let i=0;i<myLibrary_New.length;i++) {
+        if (myLibrary_New[i] !==undefined && Project.myLibrary[i] ==undefined) {
+                const pTitle = myLibrary_New[i].projectTitle;
+                new Project(pTitle);
+            }  
+    }
+}
+
+//Function to check if properties in local storage have changed
+function checkProperties(myLibrary_New) {
+
+    //Loop through each project instance
+     for (let y=0;y<myLibrary_New.length;y++) {
+        //Check properties WITHIN a project
+        let librarytodolist = myLibrary_New[y].toDoList;
+        let initialtodo= Project.myLibrary[y].toDoList;
+
+        for (let i=0;i<librarytodolist.length;i++) {
+            //Check which to do items were added 
+            console.log(librarytodolist[i]);
+            if (librarytodolist[i] !== undefined && initialtodo[i] == undefined) {
+                let currentProject = Project.myLibrary[y];
+                const newvalues = Object.values(librarytodolist[i]).toString().split(',');
+                let title = newvalues[0];
+                let duedate = newvalues[1];
+                let description = newvalues[2];
+                let priority = newvalues[3];
+
+                //Create new to do item instance
+                currentProject.toDoItem(title,duedate,description,priority);
+
+            }
+        }
+    }
+
+
+}
 
 
 
@@ -1196,7 +1227,6 @@ function handleTForm(event) {
     
 
     const currentProject = Project.myLibrary[projectId];
-    console.log(currentProject);
     //From ES6 module on Logic.js, add to do item to array and DOM
     currentProject.toDoItem(ttitle,tdueDate,tdescription,radioChoice);
 

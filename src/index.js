@@ -233,7 +233,6 @@ function handleTForm(event) {
     
 
     const currentProject = Project.myLibrary[projectId];
-    console.log(currentProject);
     //From ES6 module on Logic.js, add to do item to array and DOM
     currentProject.toDoItem(ttitle,tdueDate,tdescription,radioChoice);
 
