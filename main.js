@@ -1,1 +1,1248 @@
-(()=>{"use strict";var t={426:(t,e,n)=>{n.d(e,{Z:()=>g});var r=n(81),o=n.n(r),i=n(645),a=n.n(i),c=n(667),s=n.n(c),d=new URL(n(613),n.b),u=new URL(n(105),n.b),l=new URL(n(746),n.b),p=new URL(n(680),n.b),m=a()(o()),f=s()(d),b=s()(u),h=s()(l),y=s()(p);m.push([t.id,`\n\n@font-face {\n    font-family: 'Script';\n    src:url(${f});\n    font-weight: 600;\n    font-style:normal;\n}\n\n@font-face {\n    font-family: 'base';\n    src:url(${b});\n    font-weight: 600;\n    font-style:normal;\n}\n\nbody{\n    height:95vh;\n    margin:0;\n}\n\n#MainGrid {\n    display:grid;\n    grid-template-rows:1fr 8fr;\n    grid-template-columns:3fr 7fr;\n    gap:.5rem;\n    max-height:auto;\n}\n\n.griditem1, .griditem2 {\n    border:solid 1px rgba(77, 160, 255, 0.281);\n    border-radius:5px;\n    padding:.5rem;\n}\n\n.banner {\n    grid-column:1/3;\n    font-family: 'Script';\n    text-align: center;\n    font-size:3rem;\n    padding: 10px;\n}\n\nul {\n    list-style-type: none;\n    margin:0;\n    padding: 1rem 0 0 0;\n    font-family: 'base';\n    text-align: center;\n}\n\n.griditem1,.griditem2 {\n    display:flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n.project {\n    padding:.5rem;\n    background-color: aliceblue;\n    border-radius:.5rem;\n    margin-bottom:.5rem;\n}\n\n#expanded {\n    background-color: aliceblue;\n    border:solid 2px rgba(77, 160, 255, 0.548);\n    padding:1rem;\n}\n\n.project:hover,\n.todoitem:hover {\n    cursor:pointer;\n}\n\n#addbtn,\n#todobtn,#submitButton {\n    display:flex;\n    justify-content:space-evenly;\n    background-color: aliceblue;\n    border:solid rgba(77, 160, 255, 0.548) 2px;\n    border-radius:.5rem;\n    font-family: 'Script';\n    padding:.5rem;\n}\n\n#addbtn:hover,\n#todobtn:hover,\n#submitButton:hover {\n    cursor:pointer;\n    box-shadow: -3px 3px rgba(77, 160, 255, 0.548);\n}\n\n\n#addbtn:active,\n#todobtn:active,\n#submitButton:active {\n    cursor:pointer;\n    translate: -3px 3px;\n    box-shadow:none;\n}\n\n.formHidden {\ndisplay:none !important;\n}\n    \n.formDisplay {\ndisplay:block;\n}\n    \n#projectForm>form {\n    display:flex;\n    flex-direction:column;\n    align-items: center;\n    font-family:'base';\n}\n\n.form-row1,.form-row2 {\n    font-family:'base';\n    display:flex;\n    flex-direction:column;\n    align-items: center;\n    margin-bottom:5px;\n    gap:5px;\n}\n\n.form-row1>input[type=text] {\n    outline:none;\n    border:solid 1px rgba(77, 160, 255, 0.548);\n    width:min(300px,90%);\n    border-radius:4px;\n\n} \n\ntextarea {\n    outline:none;\n    border:solid 1px rgba(77, 160, 255, 0.548);\n    width:min(300px,90%);\n    border-radius:4px; \n}\n\n#submitButton {\n    padding-left:20px;\n    padding-right:20px;\n}\n\ninput[type=text]:hover,\ntextarea:hover {\n    background-color:rgba(240, 248, 255, 0.534);\n}\n\ninput[type=text]:active,\ntextarea:active {\n    background-color:rgba(240, 248, 255, 0.534);\n}\n\n.removebtn,\n.prioritychanger{\noutline:none;\nborder:none;\nbackground-color: aliceblue;\ncursor:pointer;\n}\n\n.removebtn:before {\n    content:url(${h})\n}\n\n.prioritychanger:before {\n    content:url(${y});\n}\n\n.removebtn:hover,\n.prioritychanger:hover {\n    transform:scale(.95);\n    opacity: .75;\n}\n\n.removebtn:active,\n.prioritychanger:active {\n    transform:scale(.85);\n    opacity: .75;\n}`,""]);const g=m},645:t=>{t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var n="",r=void 0!==e[5];return e[4]&&(n+="@supports (".concat(e[4],") {")),e[2]&&(n+="@media ".concat(e[2]," {")),r&&(n+="@layer".concat(e[5].length>0?" ".concat(e[5]):""," {")),n+=t(e),r&&(n+="}"),e[2]&&(n+="}"),e[4]&&(n+="}"),n})).join("")},e.i=function(t,n,r,o,i){"string"==typeof t&&(t=[[null,t,void 0]]);var a={};if(r)for(var c=0;c<this.length;c++){var s=this[c][0];null!=s&&(a[s]=!0)}for(var d=0;d<t.length;d++){var u=[].concat(t[d]);r&&a[u[0]]||(void 0!==i&&(void 0===u[5]||(u[1]="@layer".concat(u[5].length>0?" ".concat(u[5]):""," {").concat(u[1],"}")),u[5]=i),n&&(u[2]?(u[1]="@media ".concat(u[2]," {").concat(u[1],"}"),u[2]=n):u[2]=n),o&&(u[4]?(u[1]="@supports (".concat(u[4],") {").concat(u[1],"}"),u[4]=o):u[4]="".concat(o)),e.push(u))}},e}},667:t=>{t.exports=function(t,e){return e||(e={}),t?(t=String(t.__esModule?t.default:t),/^['"].*['"]$/.test(t)&&(t=t.slice(1,-1)),e.hash&&(t+=e.hash),/["'() \t\n]|(%20)/.test(t)||e.needQuotes?'"'.concat(t.replace(/"/g,'\\"').replace(/\n/g,"\\n"),'"'):t):t}},81:t=>{t.exports=function(t){return t[1]}},379:t=>{var e=[];function n(t){for(var n=-1,r=0;r<e.length;r++)if(e[r].identifier===t){n=r;break}return n}function r(t,r){for(var i={},a=[],c=0;c<t.length;c++){var s=t[c],d=r.base?s[0]+r.base:s[0],u=i[d]||0,l="".concat(d," ").concat(u);i[d]=u+1;var p=n(l),m={css:s[1],media:s[2],sourceMap:s[3],supports:s[4],layer:s[5]};if(-1!==p)e[p].references++,e[p].updater(m);else{var f=o(m,r);r.byIndex=c,e.splice(c,0,{identifier:l,updater:f,references:1})}a.push(l)}return a}function o(t,e){var n=e.domAPI(e);return n.update(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap&&e.supports===t.supports&&e.layer===t.layer)return;n.update(t=e)}else n.remove()}}t.exports=function(t,o){var i=r(t=t||[],o=o||{});return function(t){t=t||[];for(var a=0;a<i.length;a++){var c=n(i[a]);e[c].references--}for(var s=r(t,o),d=0;d<i.length;d++){var u=n(i[d]);0===e[u].references&&(e[u].updater(),e.splice(u,1))}i=s}}},569:t=>{var e={};t.exports=function(t,n){var r=function(t){if(void 0===e[t]){var n=document.querySelector(t);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(t){n=null}e[t]=n}return e[t]}(t);if(!r)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");r.appendChild(n)}},216:t=>{t.exports=function(t){var e=document.createElement("style");return t.setAttributes(e,t.attributes),t.insert(e,t.options),e}},565:(t,e,n)=>{t.exports=function(t){var e=n.nc;e&&t.setAttribute("nonce",e)}},795:t=>{t.exports=function(t){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var e=t.insertStyleElement(t);return{update:function(n){!function(t,e,n){var r="";n.supports&&(r+="@supports (".concat(n.supports,") {")),n.media&&(r+="@media ".concat(n.media," {"));var o=void 0!==n.layer;o&&(r+="@layer".concat(n.layer.length>0?" ".concat(n.layer):""," {")),r+=n.css,o&&(r+="}"),n.media&&(r+="}"),n.supports&&(r+="}");var i=n.sourceMap;i&&"undefined"!=typeof btoa&&(r+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(i))))," */")),e.styleTagTransform(r,t,e.options)}(e,t,n)},remove:function(){!function(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t)}(e)}}}},589:t=>{t.exports=function(t,e){if(e.styleSheet)e.styleSheet.cssText=t;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(t))}}},105:(t,e,n)=>{t.exports=n.p+"1036357b9651eff7d3dd.ttf"},613:(t,e,n)=>{t.exports=n.p+"68015177cbf9575be4a4.ttf"},680:(t,e,n)=>{t.exports=n.p+"26282881583dcc1c3371.svg"},746:(t,e,n)=>{t.exports=n.p+"fc206c2b3a24c4ad59ac.svg"}},e={};function n(r){var o=e[r];if(void 0!==o)return o.exports;var i=e[r]={id:r,exports:{}};return t[r](i,i.exports,n),i.exports}n.m=t,n.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return n.d(e,{a:e}),e},n.d=(t,e)=>{for(var r in e)n.o(e,r)&&!n.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:e[r]})},n.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),n.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),(()=>{var t;n.g.importScripts&&(t=n.g.location+"");var e=n.g.document;if(!t&&e&&(e.currentScript&&(t=e.currentScript.src),!t)){var r=e.getElementsByTagName("script");if(r.length)for(var o=r.length-1;o>-1&&!t;)t=r[o--].src}if(!t)throw new Error("Automatic publicPath is not supported in this browser");t=t.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),n.p=t})(),n.b=document.baseURI||self.location.href,n.nc=void 0;var r={};(()=>{n.d(r,{m:()=>T,E:()=>j});var t=n(379),e=n.n(t),o=n(795),i=n.n(o),a=n(569),c=n.n(a),s=n(565),d=n.n(s),u=n(216),l=n.n(u),p=n(589),m=n.n(p),f=n(426),b={};b.styleTagTransform=m(),b.setAttributes=d(),b.insert=c().bind(null,"head"),b.domAPI=i(),b.insertStyleElement=l(),e()(f.Z,b),f.Z&&f.Z.locals&&f.Z.locals;class h{static myLibrary=[];constructor(t){this.projectTitle=t,this.toDoList=[],this.toDoItem=function(t,e,n,r){const o={title:t,dueDate:e,description:n,priority:r};g.bind(this)(o)},y.bind(this)()}}function y(){h.myLibrary.push(this);const t=h.myLibrary.length-1;j.bind(this)(t),console.log(h.myLibrary)}function g(t){this.toDoList.push(t),T.bind(this)(t)}document.addEventListener("DOMContentLoaded",(t=>{const e=new h("Clean The Porsche 911");e.toDoItem("Detail the exterior","2023-09-10","Use claybar on the exterior","Medium"),e.toDoItem("Clean the interior","2023-09-15","Stick a tree freshener in there and call it a day","Low")}));const v=document.body;v.appendChild(function(){const t=document.createElement("div");t.setAttribute("id","MainGrid");const e=document.createElement("div");e.setAttribute("class","banner"),e.textContent="To Do List",t.appendChild(e);const n=document.createElement("div");n.setAttribute("class","griditem1"),t.appendChild(n);const r=document.createElement("div");return r.setAttribute("class","griditem2"),t.appendChild(r),t}()),document.querySelector(".griditem1").appendChild(function(){const t=document.createElement("ul");return t.setAttribute("class","projects"),t}());const x=document.querySelector(".projects"),L=document.querySelector(".griditem2");L.appendChild(function(){const t=document.createElement("ul");return t.setAttribute("class","todos"),t}());const A=document.querySelector(".griditem1"),E=(document.querySelector("#submitButton"),document.querySelector("#projectForm")),w=document.querySelector("#toDoForm"),C=document.getElementsByName("priority");v.removeChild(E),A.appendChild(E),v.removeChild(w),L.appendChild(w),L.appendChild(function(){const t=document.createElement("button");return t.textContent="Add New To Do",t.setAttribute("id","todobtn"),t}()),A.appendChild(function(){const t=document.createElement("button");return t.textContent="Add Project",t.setAttribute("id","addbtn"),t}());const D=document.querySelector(".todos");let S="0";function j(t){const e=document.createElement("li");e.setAttribute("id",`${t}`),e.setAttribute("class","project"),e.textContent=this.projectTitle,x.appendChild(e)}function T(t){const e=document.createElement("li");e.setAttribute("class","todoitem"),"undefined"==`${t.dueDate}`?e.textContent=`${t.title}`:e.textContent=`${t.title} due by ${t.dueDate}`,D.appendChild(e)}function k(){const t=h.myLibrary[S].toDoList;document.querySelectorAll(".todoitem").forEach((t=>{t.remove()})),t.forEach((t=>{T(t)}))}function M(t,e){for(let n=0;n<t.length;n++)if(t[n]==e)return n}document.addEventListener("click",(t=>{const e=t.target;"project"==e.getAttribute("class")&&(S=e.id,k())})),document.addEventListener("click",(t=>{const e=t.target,n=document.querySelectorAll(".todoitem");if("todoitem"==e.getAttribute("class")){const t=h.myLibrary[S].toDoList[M(n,e)];"expanded"!==e.getAttribute("id")?function(t,e){for(const n in e){const r=document.createElement("li");r.textContent=`${n.charAt(0).toUpperCase()+n.slice(1)}: ${e[n]}`,t.appendChild(r),t.setAttribute("id","expanded")}const n=document.createElement("button");n.setAttribute("class","removebtn"),t.appendChild(n);const r=document.createElement("button");r.setAttribute("class","prioritychanger"),t.appendChild(r)}(e,t):"expanded"==e.getAttribute("id")&&(function(t,e){const n=Object.keys(e).length;for(let e=1;e<=n+2;e++)t.childNodes[1].remove()}(e,t),e.setAttribute("id",""))}})),document.addEventListener("click",(t=>{"addbtn"==t.target.id&&E.setAttribute("class","formDisplay")})),document.addEventListener("click",(t=>{"todobtn"==t.target.id&&w.setAttribute("class","formDisplay")})),E.addEventListener("submit",(function(t){t.preventDefault(),new h(project_title.value),E.setAttribute("class","formHidden"),project_title.value=""})),w.addEventListener("submit",(function(t){let e="";t.preventDefault();const n=title.value,r=dueDate.value,o=description.value;C.forEach((t=>{t.checked&&(e=t.value)})),h.myLibrary[S].toDoItem(n,r,o,e),w.setAttribute("class","formHidden"),title.value="",dueDate.value="",description.value="",C.forEach((t=>{"Medium"==t.value&&(t.checked=!0)}))})),document.addEventListener("mouseup",(t=>{if("removebtn"==t.target.getAttribute("class")){const e=M(document.querySelectorAll(".todoitem"),t.target.parentElement);!function(t,e){h.myLibrary[t].toDoList.splice(e,1)}(S,e),k()}else if("prioritychanger"==t.target.getAttribute("class")){const e=M(document.querySelectorAll(".todoitem"),t.target.parentElement);!function(t,e){let n=h.myLibrary[t].toDoList[e].priority;"Low"==n?(n="Medium",h.myLibrary[t].toDoList[e].priority=n):"Medium"==n?(n="High",h.myLibrary[t].toDoList[e].priority=n):"High"==n&&(n="Low",h.myLibrary[t].toDoList[e].priority=n)}(S,e),k()}}))})()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 426:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(667);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
+// Imports
+
+
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(613), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(105), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(746), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(680), __webpack_require__.b);
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `
+
+@font-face {
+    font-family: 'Script';
+    src:url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    font-weight: 600;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'base';
+    src:url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    font-weight: 600;
+    font-style:normal;
+}
+
+body{
+    height:95vh;
+    margin:0;
+}
+
+#MainGrid {
+    display:grid;
+    grid-template-rows:1fr 8fr;
+    grid-template-columns:3fr 7fr;
+    gap:.5rem;
+    max-height:auto;
+}
+
+.griditem1, .griditem2 {
+    border:solid 1px rgba(77, 160, 255, 0.281);
+    border-radius:5px;
+    padding:.5rem;
+}
+
+.banner {
+    grid-column:1/3;
+    font-family: 'Script';
+    text-align: center;
+    font-size:3rem;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin:0;
+    padding: 1rem 0 0 0;
+    font-family: 'base';
+    text-align: center;
+}
+
+.griditem1,.griditem2 {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project {
+    padding:.5rem;
+    background-color: aliceblue;
+    border-radius:.5rem;
+    margin-bottom:.5rem;
+}
+
+#expanded {
+    background-color: aliceblue;
+    border:solid 2px rgba(77, 160, 255, 0.548);
+    padding:1rem;
+}
+
+.project:hover,
+.todoitem:hover {
+    cursor:pointer;
+}
+
+#addbtn,
+#todobtn,#submitButton {
+    display:flex;
+    justify-content:space-evenly;
+    background-color: aliceblue;
+    border:solid rgba(77, 160, 255, 0.548) 2px;
+    border-radius:.5rem;
+    font-family: 'Script';
+    padding:.5rem;
+}
+
+#addbtn:hover,
+#todobtn:hover,
+#submitButton:hover {
+    cursor:pointer;
+    box-shadow: -3px 3px rgba(77, 160, 255, 0.548);
+}
+
+
+#addbtn:active,
+#todobtn:active,
+#submitButton:active {
+    cursor:pointer;
+    translate: -3px 3px;
+    box-shadow:none;
+}
+
+.formHidden {
+display:none !important;
+}
+    
+.formDisplay {
+display:block;
+}
+    
+#projectForm>form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    font-family:'base';
+}
+
+.form-row1,.form-row2 {
+    font-family:'base';
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom:5px;
+    gap:5px;
+}
+
+.form-row1>input[type=text] {
+    outline:none;
+    border:solid 1px rgba(77, 160, 255, 0.548);
+    width:min(300px,90%);
+    border-radius:4px;
+
+} 
+
+textarea {
+    outline:none;
+    border:solid 1px rgba(77, 160, 255, 0.548);
+    width:min(300px,90%);
+    border-radius:4px; 
+}
+
+#submitButton {
+    padding-left:20px;
+    padding-right:20px;
+}
+
+input[type=text]:hover,
+textarea:hover {
+    background-color:rgba(240, 248, 255, 0.534);
+}
+
+input[type=text]:active,
+textarea:active {
+    background-color:rgba(240, 248, 255, 0.534);
+}
+
+.removebtn,
+.prioritychanger{
+outline:none;
+border:none;
+background-color: aliceblue;
+cursor:pointer;
+}
+
+.removebtn:before {
+    content:url(${___CSS_LOADER_URL_REPLACEMENT_2___})
+}
+
+.prioritychanger:before {
+    content:url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.removebtn:hover,
+.prioritychanger:hover {
+    transform:scale(.95);
+    opacity: .75;
+}
+
+.removebtn:active,
+.prioritychanger:active {
+    transform:scale(.85);
+    opacity: .75;
+}`, ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 645:
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+module.exports = function (cssWithMappingToString) {
+  var list = [];
+
+  // return the list of modules as css string
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
+      if (item[2]) {
+        content += "@media ".concat(item[2], " {");
+      }
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+      content += cssWithMappingToString(item);
+      if (needLayer) {
+        content += "}";
+      }
+      if (item[2]) {
+        content += "}";
+      }
+      if (item[4]) {
+        content += "}";
+      }
+      return content;
+    }).join("");
+  };
+
+  // import a list of modules into the list
+  list.i = function i(modules, media, dedupe, supports, layer) {
+    if (typeof modules === "string") {
+      modules = [[null, modules, undefined]];
+    }
+    var alreadyImportedModules = {};
+    if (dedupe) {
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        continue;
+      }
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
+        } else {
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
+        }
+      }
+      list.push(item);
+    }
+  };
+  return list;
+};
+
+/***/ }),
+
+/***/ 667:
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
+};
+
+/***/ }),
+
+/***/ 81:
+/***/ ((module) => {
+
+
+
+module.exports = function (i) {
+  return i[1];
+};
+
+/***/ }),
+
+/***/ 379:
+/***/ ((module) => {
+
+
+
+var stylesInDOM = [];
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+  return result;
+}
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+    identifiers.push(identifier);
+  }
+  return identifiers;
+}
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+  return updater;
+}
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+    var newLastIdentifiers = modulesToDom(newList, options);
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+      var _index = getIndexByIdentifier(_identifier);
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ 569:
+/***/ ((module) => {
+
+
+
+var memo = {};
+
+/* istanbul ignore next  */
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target);
+
+    // Special case to return head of iframe instead of iframe itself
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+    memo[target] = styleTarget;
+  }
+  return memo[target];
+}
+
+/* istanbul ignore next  */
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+  target.appendChild(style);
+}
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ 216:
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ 565:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ 795:
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+  var needLayer = typeof obj.layer !== "undefined";
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+  css += obj.css;
+  if (needLayer) {
+    css += "}";
+  }
+  if (obj.media) {
+    css += "}";
+  }
+  if (obj.supports) {
+    css += "}";
+  }
+  var sourceMap = obj.sourceMap;
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  }
+
+  // For old IE
+  /* istanbul ignore if  */
+  options.styleTagTransform(css, styleElement, options.options);
+}
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+  styleElement.parentNode.removeChild(styleElement);
+}
+
+/* istanbul ignore next  */
+function domAPI(options) {
+  if (typeof document === "undefined") {
+    return {
+      update: function update() {},
+      remove: function remove() {}
+    };
+  }
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ 589:
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ 105:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "1036357b9651eff7d3dd.ttf";
+
+/***/ }),
+
+/***/ 613:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "68015177cbf9575be4a4.ttf";
+
+/***/ }),
+
+/***/ 680:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "26282881583dcc1c3371.svg";
+
+/***/ }),
+
+/***/ 746:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fc206c2b3a24c4ad59ac.svg";
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			826: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  m0: () => (/* binding */ addItemToDom),
+  Ex: () => (/* binding */ addProjectToDom),
+  Xj: () => (/* binding */ generatetodos)
+});
+
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/style.css
+var style = __webpack_require__(426);
+;// CONCATENATED MODULE: ./src/style.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(style/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const src_style = (style/* default */.Z && style/* default */.Z.locals ? style/* default */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/Logic.js
+
+
+
+
+
+class Project {
+    static myLibrary = [];
+    
+    //Add addProj to this class as a method
+
+    constructor(projectTitle) {
+
+        this.projectTitle = projectTitle;
+    
+        this.toDoList = [];
+
+        this.toDoItem = function(title,dueDate,description,priority) {
+            const item = {
+                title,
+                dueDate,
+                description,
+                priority
+            }
+            console.log(item);
+            let add2dom = addItem.bind(this);
+            add2dom(item);
+        
+        }
+
+
+        //Push project to project library upon creation
+        let addProj = addProject.bind(this);
+        addProj();
+
+
+    };
+}
+
+
+function addProject() {
+        Project.myLibrary.push(this);
+        //Get index of project in the library
+        const index = Project.myLibrary.length -1;
+        let addToDom = addProjectToDom.bind(this);
+        addToDom(index);
+
+        //Update local storage after adding project
+        updateLocalStorage();
+
+
+}
+
+function addItem(item) {
+        this.toDoList.push(item);
+        let addToDom = addItemToDom.bind(this);
+        addToDom(item);
+
+        // Add object to local storage once Items are added
+        updateLocalStorage();
+
+}
+
+
+
+function removeToDo(projectId,i) {
+    //splice the specific to do out of the library. 
+    Project.myLibrary[projectId].toDoList.splice(i,1);
+    updateLocalStorage();
+
+}
+
+function changePriority(projectId,i) {
+    let currentPriority = Project.myLibrary[projectId].toDoList[i].priority;
+    //Toggle priority switch
+        if (currentPriority == 'Low') {currentPriority = 'Medium';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;
+        updateLocalStorage();} 
+        else if (currentPriority == 'Medium') {currentPriority = 'High';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;
+        updateLocalStorage();}
+        else if (currentPriority == 'High') {currentPriority = 'Low';
+        Project.myLibrary[projectId].toDoList[i].priority = currentPriority;
+        updateLocalStorage();}
+        
+}
+
+
+
+
+//Create first instance of Project for demo, along with to do items
+(function initialProject(){ 
+    document.addEventListener('DOMContentLoaded',(event)=> { 
+        const proj1 = new Project('Clean The Porsche 911');
+        proj1.toDoItem('Detail the exterior','2023-09-10', 'Use claybar on the exterior','Medium');
+        proj1.toDoItem('Clean the interior','2023-09-15', 'Stick a tree freshener in there and call it a day','Low');
+    });
+})();
+
+function updateLocalStorage() {
+
+    let myLibrary_serialized = JSON.stringify(Project.myLibrary);
+    localStorage.setItem("library",myLibrary_serialized);
+    //let myLibrary_deserialized = JSON.parse(localStorage.getItem("library"));
+};
+
+
+//Check local storage at Page start
+function checkLS() {   
+    let myLibrary_deserialized = JSON.parse(localStorage.getItem("library"));
+
+
+    document.addEventListener("DOMContentLoaded", ()=> {
+        if (myLibrary_deserialized !== null) {
+            //Declare initial project library for comparison
+            var todolist = myLibrary_deserialized[0].toDoList;
+            var initialToDo = Project.myLibrary[0].toDoList;
+            var projlength = myLibrary_deserialized.length;
+            var initialProjLength = Project.myLibrary.length;
+        };
+
+        //Check that local storage MATCHES initialization (i.e nothing changed on users end)
+            if (myLibrary_deserialized == null || projlength == initialProjLength && todolist.length == initialToDo.length && initialToDo[0].priority == todolist[0].priority && initialToDo[1].priority == todolist[1].priority) {console.log(true)} 
+            else {
+                //Set local storage item to what the user updated in previous session
+                let myLibrary_redone = JSON.stringify(myLibrary_deserialized);
+                localStorage.setItem("library",myLibrary_redone);
+
+                //NEED TO PUSH local storage stuff to mylibrary
+                let myLibrary_New = JSON.parse(localStorage.getItem("library"));
+                console.log(myLibrary_New);
+
+                //Check if new objects & properties are the same or have changed. Loop thru properties, if there is a change, update it in Project
+                
+
+                generatetodos();
+            }
+        
+    })
+
+}
+checkLS();
+
+
+
+
+
+;// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+
+
+function grid() {
+    const element = document.createElement('div');
+    element.setAttribute('id','MainGrid');
+
+    const banner = document.createElement('div');
+    banner.setAttribute('class','banner');
+    banner.textContent = 'To Do List';
+    element.appendChild(banner);
+
+    const leftRow = document.createElement('div');
+    leftRow.setAttribute('class','griditem1');
+    element.appendChild(leftRow);
+
+    const main = document.createElement('div');
+    main.setAttribute('class','griditem2');
+    element.appendChild(main);
+
+    return element
+}
+
+function projectList() {
+    const element = document.createElement('ul');
+    element.setAttribute('class','projects');
+
+    return element
+}
+
+function addNewProjBtn() {
+    const element = document.createElement('button');
+    element.textContent= 'Add Project';
+    element.setAttribute('id','addbtn');
+
+    return element
+}
+
+function addNewToDoBtn() {
+    const element = document.createElement('button');
+    element.textContent= 'Add New To Do';
+    element.setAttribute('id','todobtn');
+
+    return element
+}
+
+function toDoList() {
+    const element = document.createElement('ul');
+    element.setAttribute('class','todos');
+
+    return element
+}
+
+const body = document.body;
+body.appendChild(grid());
+const banner = document.querySelector('.griditem1');
+banner.appendChild(projectList());
+const ul = document.querySelector('.projects');
+const rightSide = document.querySelector('.griditem2');
+rightSide.appendChild(toDoList());
+const leftSide = document.querySelector('.griditem1');
+const submitBtn = document.querySelector('#submitButton');
+const pform = document.querySelector('#projectForm');
+const tform = document.querySelector('#toDoForm');
+const radios = document.getElementsByName("priority");
+
+
+
+//Remove project form from body, append to left column
+body.removeChild(pform);
+leftSide.appendChild(pform);
+
+//Remove todo form from body, append to right column
+body.removeChild(tform);
+rightSide.appendChild(tform);
+
+rightSide.appendChild(addNewToDoBtn());
+
+
+leftSide.appendChild(addNewProjBtn());
+const ul2 = document.querySelector('.todos');
+
+//Initialize project id variable. used to determine which project the to do items are based off.
+let projectId = '0';
+
+
+
+
+function addProjectToDom(index) {
+        const project = document.createElement('li');
+        project.setAttribute('id',`${index}`);
+        project.setAttribute('class',`project`);
+        project.textContent = this.projectTitle;
+        ul.appendChild(project);
+    }
+
+
+function addItemToDom(item) {
+    const todoitem = document.createElement('li');
+    todoitem.setAttribute('class',`todoitem`)
+    if (`${item.dueDate}` == 'undefined') {
+        todoitem.textContent = `${item.title}`;   
+    } else {
+        todoitem.textContent = `${item.title} due by ${item.dueDate}`;
+    };
+    ul2.appendChild(todoitem);
+}
+
+
+function clearToDos() {
+    const list = document.querySelectorAll('.todoitem');
+    list.forEach((listitem)=> {
+        listitem.remove();
+    })
+}
+
+(function expandProject() {
+    document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (target.getAttribute("class") == 'project') {
+            projectId = target.id;
+            generatetodos();
+        }
+    })
+})();
+
+function generatetodos() {
+    const projList = Project.myLibrary[projectId].toDoList;
+
+    //Clear rightside of current to do items in preparation for this projects.
+    clearToDos();
+    
+    //Add current projects todos to right side of screen
+    projList.forEach((object)=> {
+        addItemToDom(object);
+    })
+}
+
+(function toDoListener() {
+    document.addEventListener("click", (event) => {
+        const target =event.target;
+        const li = document.querySelectorAll('.todoitem');
+
+        if (target.getAttribute("class") == 'todoitem') {
+            const project = Project.myLibrary[projectId].toDoList[findIndex(li,target)];
+            if (target.getAttribute('id') !== 'expanded') {
+                expandToDo(target,project);
+            } else if (target.getAttribute('id') == 'expanded') {
+                minimizeToDo(target,project);
+                target.setAttribute('id','')
+
+            }
+        }
+    })
+})();
+
+function findIndex(li,target) {
+    for (let i=0; i<li.length;i++) {
+        if (li[i] == target) {
+            return i
+        }
+    }
+}
+
+function expandToDo(target,project) {
+
+    for (const key in project) {
+        const projectKey = document.createElement("li");
+        projectKey.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${project[key]}`;
+        target.appendChild(projectKey);
+        target.setAttribute('id','expanded');
+    }
+
+        //Create 'completed'/remove button and priority changer
+        const remove = document.createElement('button');
+        remove.setAttribute('class','removebtn');
+        target.appendChild(remove);
+        const prioritys = document.createElement('button');
+        prioritys.setAttribute('class','prioritychanger');
+        target.appendChild(prioritys);
+    
+}
+
+function minimizeToDo(target,project) {
+    //Get length of object to determine how many children to remove from DOM
+    const objectlength = Object.keys(project).length;
+    //Remove child nodes for many ever properties the object has. Continue iterating until objectlength+2 to compensate for the added buttons
+    for (let i=1;i<=objectlength+2;i++) {
+       target.childNodes[1].remove()
+    }
+}
+
+(function addButtonListener() {
+    document.addEventListener(("click"), (event)=> {
+        if (event.target.id == 'addbtn') {
+            pform.setAttribute('class','formDisplay');
+    
+    }}
+    )
+})();
+
+(function addToDoListener() {
+    document.addEventListener(("click"), (event)=> {
+        if (event.target.id == 'todobtn') {
+            tform.setAttribute('class','formDisplay');    
+        }})
+})();
+
+//Function to add new project upon submit
+function handleForm(event) {
+    //prevent default to stop page from refreshing upon submit
+    event.preventDefault();
+    new Project(project_title.value);
+    pform.setAttribute('class','formHidden');
+    project_title.value='';
+
+};
+
+function handleTForm(event) {
+    let radioChoice ='';
+
+    event.preventDefault();
+    //Grab key values from DOM search box.
+         const ttitle = title.value;
+         const tdueDate = dueDate.value;
+         const tdescription = description.value;
+         radios.forEach(radio => {
+            if (radio.checked) {radioChoice = radio.value};
+        })
+    
+
+    const currentProject = Project.myLibrary[projectId];
+    console.log(currentProject);
+    //From ES6 module on Logic.js, add to do item to array and DOM
+    currentProject.toDoItem(ttitle,tdueDate,tdescription,radioChoice);
+
+    //hide todoform upon submission and clear values
+    tform.setAttribute('class','formHidden');
+    title.value= '';
+    dueDate.value= '';
+    description.value= '';
+    radios.forEach(radio => {
+        if (radio.value == 'Medium') {radio.checked=true};
+    })
+}
+
+
+pform.addEventListener("submit",handleForm);
+tform.addEventListener("submit",handleTForm);
+
+(function BtnListener() {
+    document.addEventListener('mouseup',(event) => {
+        if (event.target.getAttribute('class') == 'removebtn') {
+            const li = document.querySelectorAll('.todoitem');
+            const target = event.target.parentElement;
+            const i = findIndex(li,target);
+            removeToDo(projectId,i);
+
+            //Refresh right side of page with current todo's.
+            generatetodos();
+
+        } else if (event.target.getAttribute('class') == 'prioritychanger') {
+            const li = document.querySelectorAll('.todoitem');
+            const target = event.target.parentElement;
+            const i = findIndex(li,target);
+            changePriority(projectId,i);
+
+            //Refresh right side of page with current todo's.
+            generatetodos();
+
+        }
+    })
+})();
+
+
+
+
+
+})();
+
+/******/ })()
+;
